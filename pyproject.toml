@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dynamic-code-execute"
+version = "0.1.0"
+description = "Execute Python call chains dynamically from JSON definitions"
+authors = [{ name = "AI Assistant" }]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "pydantic>=2.7.0",
+]
+
+[project.scripts]
+dynexec = "dynamic_code_execute.cli:main"
+
+[tool.setuptools]
+packages = ["dynamic_code_execute"]
